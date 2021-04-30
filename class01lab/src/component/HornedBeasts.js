@@ -1,14 +1,16 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+
 
 
 class HornedBeasts extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            numOfLikes: 0
+            numOfLikes: 0,
+            show: false,
         }
     }    
     increaseNumOfLikes = () =>{
@@ -19,10 +21,19 @@ class HornedBeasts extends React.Component{
         );
         
     }
+
+    displayBeast = (e) => {
+        this.props.popUpSelectedImg(this.props);
+    }
+
     render(){
         return(
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={this.props.imageUrl} />
+            <>
+            <Card>
+                <Card.Img variant="top" onClick={this.displayBeast}
+                src={this.props.imageUrl} 
+                title = {this.props.title}
+                />
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text>
@@ -32,12 +43,7 @@ class HornedBeasts extends React.Component{
                     <Button variant="primary" onClick={this.increaseNumOfLikes}>❤️Like</Button>
                 </Card.Body>
             </Card>
-            // <section>
-            //     <h2>{this.props.title}</h2>
-            //     <p>❤️ {this.state.numOfLikes}</p>
-            //     <img onClick={this.increaseNumOfLikes} src={this.props.imageUrl} alt={this.props.title} title={this.props.title} width={300} />
-            //     <p>{this.props.description}</p>
-            // </section>
+            </>
         );
     }
 }
