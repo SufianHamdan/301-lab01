@@ -1,6 +1,30 @@
 # Getting Started with Create React App
 
-Number and name of feature: #1 Display a Modal
+Number and name of feature: #1 Display images
+
+Estimate of time needed to complete: 5 hours
+
+Start time: 4:00
+
+Finish time: 9:00
+
+Actual time needed to complete: 3 hours
+
+---
+
+Number and name of feature: #2 Display a Modal
+
+Estimate of time needed to complete: 5 hours
+
+Start time: 4:00
+
+Finish time: 9:00
+
+Actual time needed to complete: 3 hours
+
+---
+
+Number and name of feature: #3 Filter by Numbers of Horns
 
 Estimate of time needed to complete: 5 hours
 
